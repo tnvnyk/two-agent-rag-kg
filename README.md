@@ -39,7 +39,7 @@ The whole flow is orchestrated using **LangGraph** - each agent is a node, infor
 
 ## Metrics
 
-![Evaluation Results](res1.png)
+![Evaluation Results](res2.png)
 
 | Metric | Score | What it means |
 |--------|-------|---------------|
