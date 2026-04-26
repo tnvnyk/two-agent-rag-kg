@@ -1,4 +1,4 @@
-# Two-Agent RAG System — Wikipedia + Wikidata
+# Two-Agent RAG System - Wikipedia + Wikidata
 
 A question answering system that uses two completely different retrieval strategies and combines them into one grounded answer.
 
@@ -6,11 +6,11 @@ A question answering system that uses two completely different retrieval strateg
 
 ## What this project does
 
-Most RAG systems retrieve from one source — usually a bunch of documents. This project asks a different question: **what if two agents retrieved from fundamentally different types of knowledge, and a judge combined them?**
+Most RAG systems retrieve from one source - usually a bunch of documents. This project asks a different question: **what if two agents retrieved from fundamentally different types of knowledge, and a judge combined them?**
 
-Agent A searches Wikipedia articles using vector similarity — it finds the most relevant paragraphs and uses an LLM to generate a contextual, narrative answer.
+Agent A searches Wikipedia articles using vector similarity. It finds the most relevant paragraphs and uses an LLM to generate a contextual, narrative answer.
 
-Agent B queries Wikidata using SPARQL — it traverses a real Knowledge Graph across two hops, collecting structured facts like relationships, employers, awards, and fields of work.
+Agent B queries Wikidata using SPARQL. It traverses a real Knowledge Graph across two hops, collecting structured facts like relationships, employers, awards, and fields of work.
 
 A judge then synthesizes both into one answer that is factually grounded and contextually rich.
 
@@ -119,16 +119,13 @@ query = "What universities were Einstein and Hawking associated with?"
 
 ## What I'd build next
 
-- **Subgraph pruning** — rank the 30 retrieved triples by relevance to the query, pass only top 10 to judge. This would fix the low context utilization score.
-- **SPARQL query generation** — instead of fixed property lookups, use the LLM to write the SPARQL query dynamically based on the question.
-- **Multi-document Agent A** — right now Agent A searches across 5 Wikipedia articles. Scaling to hundreds would make it much more useful.
-- **Faithfulness verification** — post-process the judge's output sentence by sentence, stripping anything that can't be traced back to either source.
-
+- **Subgraph pruning** : Rank the 30 retrieved triples by relevance to the query, pass only top 10 to judge. This would fix the low context utilization score.
+- **SPARQL query generation** :  Instead of fixed property lookups, use the LLM to write the SPARQL query dynamically based on the question.
 ---
 
 ## Why this matters
 
-The tension between symbolic knowledge (graphs, structured facts) and neural knowledge (embeddings, language models) is a live research problem. This project is a small working demo of that tension — it doesn't solve it, but it makes it visible and measurable.
+The tension between symbolic knowledge (graphs, structured facts) and neural knowledge (embeddings, language models) is a live research problem. This project is a small working demo of that tension. It doesn't solve it, but it makes it visible and measurable.
 
 ---
 
