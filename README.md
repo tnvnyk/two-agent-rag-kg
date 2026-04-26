@@ -126,7 +126,6 @@ query = "What universities were Einstein and Hawking associated with?"
 ## Why this matters
 
 The tension between symbolic knowledge (graphs, structured facts) and neural knowledge (embeddings, language models) is a live research problem. This project is a small working demo of that tension. It doesn't solve it, but it makes it visible and measurable.
-
 ---
 
-*Built in a weekend. All free tools. No fluff.*
+*Built using free tools.* 
